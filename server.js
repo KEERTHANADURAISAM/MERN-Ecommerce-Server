@@ -21,7 +21,7 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.options('*', cors()); // Handle preflight requests globally
 app.use(compression());
 app.use(cookieParser());
 app.use(express.json());
